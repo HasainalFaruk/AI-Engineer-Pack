@@ -1,19 +1,18 @@
 ﻿# Checklists
 
 ## Purpose
-The $name folder contains quality gates for delivery, review, security, testing, deployment, accessibility, and documentation.
+The `checklists` folder contains quality gates for delivery, review, security, testing, deployment, accessibility, and documentation.
 
 ## Contents
-- Markdown documentation written for both human engineers and AI coding assistants.
-- Reusable guidance that can be linked from prompts, project instructions, reviews, and implementation plans.
-- Cross-references to related folders so workflows can be assembled quickly.
+- Code review, security, testing, deployment, performance, accessibility, documentation, release, and architecture review checklists.
+- Practical criteria for deciding whether work is ready to hand off.
+- Links to related commands and skills.
 
 ## Usage
-Use this folder when its topic matches the current task. For best results, combine it with a command from [commands](../commands/README.md), a domain skill from [skills](../skills/README.md), a framework from [frameworks](../frameworks/README.md), and a validation checklist from [checklists](../checklists/README.md).
+Use checklists near the end of a task and during review. Treat unchecked items as explicit risks or follow-up work rather than background noise.
 
 ## Related folders
 - [Commands](../commands/README.md)
 - [Skills](../skills/README.md)
-- [Frameworks](../frameworks/README.md)
 - [Templates](../templates/README.md)
-- [Checklists](../checklists/README.md)
+- [Docs](../docs/README.md)

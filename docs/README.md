@@ -1,19 +1,18 @@
 ﻿# Docs
 
 ## Purpose
-The $name folder contains project-level documentation for maintaining, extending, and governing the AI Engineer Pack.
+The `docs` folder contains project-level documentation for maintaining, extending, and governing the AI Engineer Pack.
 
 ## Contents
-- Markdown documentation written for both human engineers and AI coding assistants.
-- Reusable guidance that can be linked from prompts, project instructions, reviews, and implementation plans.
-- Cross-references to related folders so workflows can be assembled quickly.
+- Roadmap, changelog, architecture, contribution guidance, FAQ, generated indexes, and generated summary.
+- Maintenance documentation for repository structure and future improvements.
+- Cross-links to core pack resources.
 
 ## Usage
-Use this folder when its topic matches the current task. For best results, combine it with a command from [commands](../commands/README.md), a domain skill from [skills](../skills/README.md), a framework from [frameworks](../frameworks/README.md), and a validation checklist from [checklists](../checklists/README.md).
+Use this folder to understand the pack as a project: how it is organized, how contributors should work, and how generated indexes summarize the current repository.
 
 ## Related folders
-- [Commands](../commands/README.md)
+- [Root README](../README.md)
 - [Skills](../skills/README.md)
-- [Frameworks](../frameworks/README.md)
+- [Commands](../commands/README.md)
 - [Templates](../templates/README.md)
-- [Checklists](../checklists/README.md)

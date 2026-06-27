@@ -1,19 +1,18 @@
 ﻿# Routers
 
 ## Purpose
-The $name folder contains decision rules that route a request to the right command, prompt framework, skill, template, and checklist.
+The `routers` folder contains decision rules that route a request to the right command, prompt framework, skill, template, and checklist.
 
 ## Contents
-- Markdown documentation written for both human engineers and AI coding assistants.
-- Reusable guidance that can be linked from prompts, project instructions, reviews, and implementation plans.
-- Cross-references to related folders so workflows can be assembled quickly.
+- [Task Router](task-router.md) for selecting pack resources.
+- Routing guidance for ambiguous or multi-domain engineering requests.
+- Escalation rules for security, testing, architecture, and documentation concerns.
 
 ## Usage
-Use this folder when its topic matches the current task. For best results, combine it with a command from [commands](../commands/README.md), a domain skill from [skills](../skills/README.md), a framework from [frameworks](../frameworks/README.md), and a validation checklist from [checklists](../checklists/README.md).
+Use routers at the beginning of a task to classify intent, identify the domain, and assemble the right workflow from commands, skills, frameworks, templates, and checklists.
 
 ## Related folders
 - [Commands](../commands/README.md)
 - [Skills](../skills/README.md)
 - [Frameworks](../frameworks/README.md)
-- [Templates](../templates/README.md)
 - [Checklists](../checklists/README.md)

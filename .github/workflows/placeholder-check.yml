@@ -1,0 +1,34 @@
+﻿name: Placeholder Check
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/check_placeholders.py"
+      - ".github/workflows/placeholder-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - "scripts/check_placeholders.py"
+      - ".github/workflows/placeholder-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-placeholders:
+    name: Detect placeholder text
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run placeholder checker
+        run: python scripts/check_placeholders.py

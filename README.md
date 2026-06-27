@@ -1,33 +1,184 @@
 ﻿# AI Engineer Pack
 
-The AI Engineer Pack is a complete Markdown knowledge base for AI-assisted software engineering. It gives ChatGPT, Codex, GitHub Copilot, OpenAI Agents, and future coding assistants a shared structure for understanding tasks, selecting workflows, producing artifacts, and validating results.
+> **Professional AI Engineering Knowledge Base for ChatGPT, Codex, GitHub Copilot, Claude Code, Gemini CLI, and modern AI coding assistants.**
 
-## Repository Map
-- [system](system/README.md): operating principles, quality standards, and guardrails.
-- [routers](routers/README.md): decision rules for choosing the right pack resources.
-- [frameworks](frameworks/README.md): prompt engineering frameworks and examples.
-- [commands](commands/README.md): reusable workflows for common task verbs.
-- [chatgpt](chatgpt/README.md): ChatGPT-specific usage guidance.
-- [codex](codex/README.md): Codex-style agent collaboration guidance.
-- [skills](skills/README.md): domain-specific playbooks.
-- [templates](templates/README.md): starter templates for common projects.
-- [checklists](checklists/README.md): delivery and review quality gates.
-- [examples](examples/README.md): applied workflow examples.
-- [docs](docs/README.md): roadmap, architecture, contribution, and FAQ documentation.
-- [scripts](scripts/README.md): maintenance and validation helpers.
-- [.github](.github/README.md): GitHub collaboration and automation configuration.
+---
 
-## Recommended Workflow
-1. Use [routers](routers/README.md) to classify the request.
-2. Select a task command from [commands](commands/README.md).
-3. Choose a prompt framework from [frameworks](frameworks/README.md).
-4. Apply one or more domain skills from [skills](skills/README.md).
-5. Start from a template when creating a new artifact.
-6. Validate with the matching checklist.
-7. Record lasting decisions in [docs](docs/README.md).
+## 🚀 Overview
 
-## Example
-A request to design and build a secure FastAPI service can combine [commands/design](commands/design/README.md), [frameworks/plan-and-solve](frameworks/plan-and-solve/README.md), [skills/security](skills/security/README.md), [templates/fastapi](templates/fastapi/README.md), and [checklists/testing](checklists/testing/README.md).
+AI Engineer Pack is a modular knowledge base designed to help developers, AI engineers, software architects, and technical teams build higher-quality software with AI coding assistants.
 
-## Quality Standard
-Documentation in this pack should be complete, specific, cross-linked, and usable without additional explanation. Avoid vague placeholders, unexplained jargon, and instructions that cannot be verified.
+Instead of being a simple prompt collection, AI Engineer Pack organizes engineering knowledge into reusable modules including skills, frameworks, commands, templates, examples, and system documentation.
+
+The goal is to provide a consistent workflow that works across multiple AI coding assistants while remaining easy to extend and maintain.
+
+---
+
+# ✨ Features
+
+* 🧠 AI Engineering System Documentation
+* 🤖 ChatGPT & Codex Workflows
+* 📚 Prompt Engineering Frameworks
+* 💻 Technology-Specific Skills
+* ⚙️ Reusable AI Commands
+* 📋 Engineering Checklists
+* 🏗 Project Templates
+* 📖 Practical Examples
+* 🔄 Modular Repository Structure
+* 📈 Designed for Continuous Improvement
+
+---
+
+# 📦 Repository Structure
+
+```text
+AI-Engineer-Pack/
+│
+├── .github/           GitHub configuration
+├── chatgpt/           ChatGPT workflows
+├── checklists/        Engineering checklists
+├── codex/             Codex documentation
+├── commands/          AI command library
+├── docs/              Project documentation
+├── examples/          Example workflows
+├── frameworks/        Prompt engineering frameworks
+├── routers/           Task routing guides
+├── scripts/           Validation utilities
+├── skills/            Technology-specific skills
+├── system/            Core AI engineering standards
+├── templates/         Project templates
+├── archive/           Archived upstream resources
+│
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── VERSION.md
+```
+
+---
+
+# 🚀 Quick Start
+
+Clone the repository:
+
+```bash
+git clone git@github.com:HasainalFaruk/AI-Engineer-Pack.git
+```
+
+Open the repository in:
+
+* ChatGPT Projects
+* Codex
+* GitHub Copilot
+* Claude Code
+* VS Code
+* Cursor
+* Windsurf
+
+Choose:
+
+* a Skill
+* a Framework
+* a Command
+
+Combine them to solve your engineering task.
+
+---
+
+# 🤖 Supported AI Assistants
+
+* ChatGPT
+* Codex
+* GitHub Copilot
+* Claude Code
+* Gemini CLI
+* Cursor
+* Windsurf
+
+---
+
+# 📚 Repository Modules
+
+| Module          | Purpose                                                |
+| --------------- | ------------------------------------------------------ |
+| **system/**     | Core engineering standards and AI operating principles |
+| **skills/**     | Technology-specific knowledge and workflows            |
+| **frameworks/** | Prompt engineering methodologies                       |
+| **commands/**   | Reusable AI engineering commands                       |
+| **templates/**  | Project starter templates                              |
+| **checklists/** | Validation and review guides                           |
+| **examples/**   | Practical implementation examples                      |
+| **chatgpt/**    | ChatGPT-specific guidance                              |
+| **codex/**      | Codex-specific guidance                                |
+| **docs/**       | Project documentation                                  |
+
+---
+
+# 🎯 Design Principles
+
+AI Engineer Pack follows five core principles:
+
+1. **Modular**
+2. **Reusable**
+3. **Maintainable**
+4. **AI-first**
+5. **Open Source**
+
+---
+
+# 🛣 Roadmap
+
+## ✅ v1.0
+
+* Repository foundation
+* Core documentation
+* Framework library
+* Command library
+* Technology skills
+* Templates
+* Checklists
+
+## 🚧 v1.1
+
+* Documentation improvements
+* Better examples
+* Repository validation
+* Improved navigation
+
+## 🔜 v1.2
+
+* OpenAI Agents SDK
+* Model Context Protocol (MCP)
+* LangGraph
+* CrewAI
+* DSPy
+* Retrieval-Augmented Generation (RAG)
+
+## 🌟 v2.0
+
+AI Engineering Platform with automation, validation, and intelligent repository tooling.
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+Please read **CONTRIBUTING.md** before submitting pull requests.
+
+Ideas, bug reports, documentation improvements, and new technology skills are all appreciated.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# ⭐ Support
+
+If this project helps you, consider giving it a ⭐ on GitHub.
+
+Feedback, issues, and contributions are always welcome.

@@ -1,0 +1,31 @@
+﻿# CODEOWNERS for AI Engineer Pack
+#
+# The repository owner is the default reviewer for all pack content.
+
+* @HasainalFaruk
+
+# Core project documentation
+/README.md @HasainalFaruk
+/docs/ @HasainalFaruk
+/CONTRIBUTING.md @HasainalFaruk
+/CODE_OF_CONDUCT.md @HasainalFaruk
+/SECURITY.md @HasainalFaruk
+/SUPPORT.md @HasainalFaruk
+
+# Pack content areas
+/system/ @HasainalFaruk
+/routers/ @HasainalFaruk
+/frameworks/ @HasainalFaruk
+/commands/ @HasainalFaruk
+/skills/ @HasainalFaruk
+/templates/ @HasainalFaruk
+/checklists/ @HasainalFaruk
+/examples/ @HasainalFaruk
+
+# Assistant-specific guidance
+/chatgpt/ @HasainalFaruk
+/codex/ @HasainalFaruk
+
+# GitHub automation and community health
+/.github/ @HasainalFaruk
+/CODEOWNERS @HasainalFaruk

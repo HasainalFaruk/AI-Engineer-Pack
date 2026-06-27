@@ -1,0 +1,34 @@
+﻿name: Documentation Quality Check
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/validate.py"
+      - ".github/workflows/spell-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - "scripts/validate.py"
+      - ".github/workflows/spell-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation-quality:
+    name: Run repository validation toolkit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run full validation
+        run: python scripts/validate.py

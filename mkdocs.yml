@@ -1,0 +1,118 @@
+﻿site_name: AI Engineer Pack
+site_description: Documentation, prompts, workflows, templates, and validation tooling for AI-assisted software engineering.
+site_author: AI Engineer Pack Maintainers
+site_url: https://hasainalfaruk.github.io/AI-Engineer-Pack/
+repo_url: https://github.com/HasainalFaruk/AI-Engineer-Pack
+repo_name: HasainalFaruk/AI-Engineer-Pack
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+
+copyright: Copyright &copy; AI Engineer Pack contributors
+
+nav:
+  - Home: index.md
+  - Overview:
+      - Documentation Summary: SUMMARY.md
+      - Architecture: ARCHITECTURE.md
+      - Roadmap: ROADMAP.md
+      - FAQ: FAQ.md
+  - System: SYSTEM_INDEX.md
+  - Agents: AGENT_INDEX.md
+  - MCP: MCP_INDEX.md
+  - Skills: SKILL_INDEX.md
+  - Frameworks: FRAMEWORK_INDEX.md
+  - Commands: COMMAND_INDEX.md
+  - Templates: TEMPLATE_INDEX.md
+  - Checklists: CHECKLIST_INDEX.md
+  - Examples: EXAMPLE_INDEX.md
+  - Contributing:
+      - Contribution Guide: CONTRIBUTING.md
+      - Changelog: CHANGELOG.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HasainalFaruk/AI-Engineer-Pack
+      name: AI Engineer Pack on GitHub
+  generator: false
+
+watch:
+  - docs
+  - skills
+  - frameworks
+  - commands
+  - templates
+  - checklists
+  - examples
+  - system
+  - mcp
+
+
