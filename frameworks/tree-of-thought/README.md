@@ -1,32 +1,62 @@
 ﻿# Tree of Thought Framework
 
 ## Purpose
-The Tree of Thought framework structures prompts so AI assistants understand context, objectives, reasoning expectations, output format, and quality criteria.
+Tree of Thought explores multiple reasoning branches before selecting a solution. Instead of committing to the first plausible answer, the assistant generates alternatives, evaluates them, and chooses or combines the strongest path.
 
-## Contents
-- Framework overview and fit.
-- Prompt structure.
-- Example prompt.
-- Related workflow links.
+## When to use
+- Architecture decisions with meaningful tradeoffs.
+- Algorithm design, planning, strategy, or root-cause analysis.
+- Problems where the first answer may be locally plausible but globally weak.
+- Comparing implementation options before editing code.
 
-## Usage
-Use this framework when it improves clarity for a task. Pair it with [commands](../../commands/README.md), [skills](../../skills/README.md), and [checklists](../../checklists/README.md).
+## When not to use
+- Straightforward tasks with an obvious solution.
+- Time-sensitive work where exploration adds little value.
+- Cases where there is no room to choose among alternatives.
 
-## Prompt Structure
-`	ext
-Context: Describe the project, files, constraints, and user goal.
-Objective: State the specific outcome required.
-Method: Explain the reasoning or execution pattern.
-Output: Define the format and level of detail.
-Quality: List acceptance criteria, risks, and checks.
-`
+## Advantages
+- Surfaces tradeoffs and hidden assumptions.
+- Reduces premature convergence on a weak idea.
+- Useful for complex planning and design decisions.
+- Can combine strengths from multiple branches.
 
-## Example
-`	ext
-Use the Tree of Thought framework to design a reliable implementation plan. Inspect repository context first, follow existing conventions, include verification, and summarize tradeoffs.
-`
+## Limitations
+- More expensive and verbose than direct prompting.
+- Requires clear evaluation criteria.
+- Can produce artificial alternatives if the problem is simple.
+- Does not replace empirical verification.
 
-## Related folders
-- [Commands](../../commands/README.md)
-- [Skills](../../skills/README.md)
-- [Examples](../../examples/README.md)
+## Prompt structure
+```text
+Problem: Define the decision or task.
+Criteria: State how options will be evaluated.
+Branches: Generate several plausible approaches.
+Evaluate: Compare strengths, risks, and constraints.
+Select: Recommend one approach or synthesize a hybrid.
+Verify: Define how the choice will be tested or reviewed.
+```
+
+## Practical example
+```text
+Problem: Choose a caching strategy for a read-heavy API.
+Criteria: Correctness, complexity, invalidation risk, latency, and operational cost.
+Branches: In-memory cache, Redis cache, database materialized view.
+Evaluate: Compare each option against the criteria.
+Select: Recommend the simplest reliable strategy and tests.
+```
+
+## ChatGPT example
+```text
+Use Tree of Thought to compare three onboarding designs for a developer tool. Evaluate each for implementation effort, user clarity, maintainability, and measurable success. Recommend one path with tradeoffs.
+```
+
+## Codex example
+```text
+Use Tree of Thought before refactoring the data access layer. Inspect the current structure, propose three refactor paths, compare risk and test impact, then implement only the selected low-risk path after summarizing it.
+```
+
+## Related frameworks
+- [Least-to-Most](../least-to-most/README.md) for dependency-ordered decomposition.
+- [Plan and Solve](../plan-and-solve/README.md) for a single chosen plan.
+- [Reflection](../reflection/README.md) for critique of the selected answer.
+- [Self-Refine](../self-refine/README.md) for improving a draft solution.

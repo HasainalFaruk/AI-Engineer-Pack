@@ -1,32 +1,59 @@
 ﻿# Reflection Framework
 
 ## Purpose
-The Reflection framework structures prompts so AI assistants understand context, objectives, reasoning expectations, output format, and quality criteria.
+Reflection asks the assistant to examine an answer, plan, or implementation after producing it. The goal is to identify mistakes, missing requirements, weak assumptions, and possible improvements before final handoff.
 
-## Contents
-- Framework overview and fit.
-- Prompt structure.
-- Example prompt.
-- Related workflow links.
+## When to use
+- Reviewing a completed draft or code change.
+- Checking whether an answer satisfies all user requirements.
+- Identifying risks before deployment, release, or review.
+- Improving reasoning-heavy outputs.
 
-## Usage
-Use this framework when it improves clarity for a task. Pair it with [commands](../../commands/README.md), [skills](../../skills/README.md), and [checklists](../../checklists/README.md).
+## When not to use
+- When the assistant has not yet gathered enough evidence.
+- When immediate action is needed and a review step would delay critical response.
+- When the task already has a stronger external verifier, such as tests, that should run first.
 
-## Prompt Structure
-`	ext
-Context: Describe the project, files, constraints, and user goal.
-Objective: State the specific outcome required.
-Method: Explain the reasoning or execution pattern.
-Output: Define the format and level of detail.
-Quality: List acceptance criteria, risks, and checks.
-`
+## Advantages
+- Catches omissions and contradictions.
+- Encourages humility about assumptions.
+- Works well as a final quality gate.
+- Can be paired with checklists for consistent review.
 
-## Example
-`	ext
-Use the Reflection framework to design a reliable implementation plan. Inspect repository context first, follow existing conventions, include verification, and summarize tradeoffs.
-`
+## Limitations
+- Reflection is not proof of correctness.
+- The assistant may miss its own blind spots.
+- Without criteria, reflection can become generic reassurance.
 
-## Related folders
-- [Commands](../../commands/README.md)
-- [Skills](../../skills/README.md)
-- [Examples](../../examples/README.md)
+## Prompt structure
+```text
+Output to review: Provide the answer, plan, or changed artifact.
+Criteria: List requirements, constraints, and quality checks.
+Reflect: Identify gaps, risks, and unsupported assumptions.
+Revise or recommend: Improve the output or state what should change.
+Final check: Confirm what remains uncertain.
+```
+
+## Practical example
+```text
+Output to review: A deployment checklist.
+Criteria: Rollback, monitoring, database safety, approvals, and communication.
+Reflect: Identify missing release risks.
+Revise: Add concrete preflight and post-deploy checks.
+```
+
+## ChatGPT example
+```text
+Reflect on the answer you just gave. Check it against my original requirements, identify any weak assumptions, and provide a revised final version only if needed.
+```
+
+## Codex example
+```text
+After making the code change, use Reflection to compare the diff against the request. Look for missed tests, docs, edge cases, and unintended scope expansion, then fix any concrete gaps and rerun verification.
+```
+
+## Related frameworks
+- [Self-Refine](../self-refine/README.md) for iterative revision.
+- [ReAct](../react/README.md) for evidence-gathering before reflection.
+- [Chain of Thought](../chain-of-thought/README.md) for stepwise explanations.
+- [Tree of Thought](../tree-of-thought/README.md) for evaluating alternatives.
